@@ -1,0 +1,500 @@
+  613  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  614  ./compile.sh
+  615  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  616  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  617  ./compile.sh
+  618  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  619  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  620  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  621  ./compile.sh
+  622  ./compile.sh
+  623  ./compile.sh
+  624  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  625  ./compile.sh
+  626  ./compile.sh
+  627  ./compile.sh
+  628  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  629  ./compile.sh
+  630  ./compile.sh
+  631  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  632  vim test.sh
+  633  chmod u+wrx test.sh 
+  634  ls
+  635  gcopy echo ./compile.sh
+  636  vim test.sh
+  637  ls
+  638  ls
+  639  ./compile.sh
+  640  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  641  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  642  ./compile.sh
+  643  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  644  ./compile.sh
+  645  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  646  ./compile.sh
+  647  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  648  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  649  ./compile.sh
+  650  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  651  ./compile.sh
+  652  ./compile.sh
+  653  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  654  ./compile.sh
+  655  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  656  ls
+  657  ./compile.sh
+  658  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  659  ./compile.sh
+  660  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  661  ./compile.sh
+  662  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  663  ./compile.sh
+  664  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  665  ./compile.sh
+  666  ./compile.sh
+  667  ./compile.sh
+  668  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  669  ./compile.sh
+  670  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  671  ./compile.sh
+  672  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  673  ./compile.sh
+  674  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  675  ./compile.sh
+  676  ./compile.sh
+  677  ./compile.sh
+  678  ./compile.sh
+  679  ./compile.sh
+  680  ./compile.sh
+  681  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  682  ./compile.sh
+  683  ./compile.sh
+  684  ./compile.sh
+  685  ./compile.sh
+  686  ./compile.sh
+  687  ./compile.sh
+  688  ./compile.sh
+  689  ./compile.sh
+  690  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  691  ./compile.sh
+  692  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  693  ./compile.sh
+  694  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  695  ./compile.sh
+  696  ./compile.sh
+  697  ./compile.sh
+  698  ./compile.sh
+  699  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  700  ./compile.sh
+  701  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  702  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  703  ./compile.sh
+  704  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  705  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  706  ./compile.sh
+  707  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  708  ./compile.sh
+  709  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  710  ./compile.sh
+  711  ./compile.sh
+  712  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  713  ./compile.sh
+  714  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  715  ./compile.sh
+  716  ./compile.sh
+  717  ./mdconv -contacts -frames 1:7 test/ca.dcd 
+  718  ls
+  719  cd test
+  720  ls
+  721  catdcd -num /green/s4/nawrocki/cg/testing/z8/s1.4/e3.0/f10_5/a0.8/sys.dcd 
+  722  du -sh /green/s4/nawrocki/cg/testing/z8/s1.4/e3.0/f10_5/a0.8/sys.dcd 
+  723  cp /green/s4/nawrocki/cg/testing/z8/s1.4/e3.0/f10_5/a0.8/sys.dcd .
+  724  ls
+  725  mkdir pre
+  726  mv ca.* output.dcd pre/
+  727  ls
+  728  echo cp /green/s4/nawrocki/cg/testing/z8/s1.4/e3.0/f10_5/a0.8/sys.dcd .
+  729  gcopy echo cp /green/s4/nawrocki/cg/testing/z8/s1.4/e3.0/f10_5/a0.8/sys.dcd .
+  730  vim cp.sh
+  731  ls
+  732  cd ..
+  733  ls
+  734  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  735  ./compile.sh
+  736  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  737  ./compile.sh
+  738  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  739  ./compile.sh
+  740  ./compile.sh
+  741  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  742  ./compile.sh
+  743  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  744  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  745  ./compile.sh
+  746  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  747  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  748  ./compile.sh
+  749  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  750  ./compile.sh
+  751  ./compile.sh
+  752  ./compile.sh
+  753  ./compile.sh
+  754  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  755  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  756  ./compile.sh
+  757  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  758  ./compile.sh
+  759  ./mdconv -contacts -frames 1:7 test/sys.dcd 
+  760  ./mdconv -contacts -frames 1:100 test/sys.dcd 
+  761  ./mdconv -contacts test/sys.dcd 
+  762  ./mdconv -contacts test/sys.dcd > con.dat
+  763  more con.dat 
+  764  ./mdconv -contacts test/sys.dcd > con.dat
+  765  more con.dat 
+  766  ./mdconv -contacts test/sys.dcd | cat
+  767  ./mdconv -contacts test/sys.dcd | cat > con.dat
+  768  more con.dat 
+  769  ./compile.sh
+  770  ./compile.sh
+  771  ./compile.sh
+  772  ./compile.sh
+  773  ./mdconv -contacts test/sys.dcd
+  774  ls
+  775  more con.dat 
+  776  xmgrace con.dat 
+  777  more test/cp.sh 
+  778  ls -lt /green/s4/nawrocki/cg/testing/
+  779  ls -lt /green/s4/nawrocki/cg/testing/z8/s1.4/e3.0/f10_5/a0.?/ana/
+  780  ls -lt /green/s4/nawrocki/cg/testing/z8/s1.4/e3.0/f*/a0.?/ana/
+  781  ls -lt /green/s4/nawrocki/cg/testing/z8/s1.4/e*/f*/a0.?/ana/
+  782  ls -lt /green/s4/nawrocki/cg/testing/z8/s*/e*/f*/a0.?/ana/
+  783  ls -lt /green/s4/nawrocki/cg/testing/z*/s*/e*/f*/a0.?/ana/
+  784  ls -lt /green/s4/nawrocki/cg/testing/z32/s*/e*/f*/a0.?/ana/
+  785  ls /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/
+  786  ls /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/
+  787  ls
+  788  cd test
+  789  ls
+  790  chmod u+wrx cp.sh 
+  791  vim cp.sh 
+  792  ./cp.sh 
+  793  ls
+  794  cd ..
+  795  ls
+  796  ./mdconv -contacts test/sys.dcd
+  797  head /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con.res 
+  798  xmgrace con.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con.res 
+  799  ls
+  800  rm con.dat 
+  801  ./mdconv -contacts test/sys.dcd
+  802  xmgrace con.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con.res 
+  803  catdcd -num test/sys.dcd 
+  804  xmgrace con.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con.res 
+  805  #./mdconv -contacts test/sys.dcd
+  806  #./mdconv -h
+  807  ./mdconv -h
+  808  ./mdconv -skip 9 -contacts test/sys.dcd
+  809  ./mdconv -skip 9 -contacts test/sys.dcd | wc -l
+  810  ls
+  811  wc -l con.dat 
+  812  wc -l /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con.res 
+  813  rm con.dat 
+  814  ./mdconv -skip 9 -contacts test/sys.dcd
+  815  wc -l con.dat 
+  816  xmgrace con.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con.res 
+  817  awk '{print $1/10,$2}' con.dat 
+  818  awk '{print $1/10,$2}' con.dat > con2.dat
+  819  xmgrace con2.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con.res 
+  820  gedit /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con_pairs.fun 
+  821  vim /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results.sh 
+  822  vim /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/con_pairs.sh 
+  823  gcopy echo /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/con_pairs.sh 
+  824  ls
+  825  cd test
+  826  ls
+  827  vim cp.sh 
+  828  grep catdcd ~/.bashrc
+  829  gcopy grep catdcd ~/.bashrc
+  830  vim cp.sh 
+  831  ./cp.sh 
+  832  vim cp.sh 
+  833  ./cp.sh 
+  834  ls
+  835  cd ..
+  836  ls
+  837  ./mdconv -contacts test/sys.dcd
+  838  head con.dat 
+  839  tail con.dat 
+  840  wc -l con.dat 
+  841  rm con.dat con2.dat 
+  842  ./mdconv -contacts test/sys.dcd
+  843  ls
+  844  more con.dat 
+  845  wc -l con.dat 
+  846  ./mdconv -contacts test/sys.dcd
+  847  wc -l con.dat 
+  848  ls
+  849  rm con.dat 
+  850  ./mdconv -contacts test/sys.dcd
+  851  wc -l con.dat 
+  852  ./mdconv -contacts test/sys.dcd
+  853  wc -l con.dat 
+  854  ./mdconv -contacts test/sys.dcd
+  855  wc -l con.dat 
+  856  ./mdconv -contacts test/sys.dcd
+  857  wc -l con.dat 
+  858  ./mdconv -contacts test/sys.dcd
+  859  wc -l con.dat 
+  860  ./compile.sh
+  861  ./mdconv -contacts test/sys.dcd
+  862  wc -l con.dat 
+  863  ./mdconv -contacts test/sys.dcd
+  864  wc -l con.dat 
+  865  xmgrace con.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con.res 
+  866  head con.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con.res 
+  867  tail con.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con.res 
+  868  tail con.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/test/con.res 
+  869  head con.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/test/con.res 
+  870  xmgrace con.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/test/con.res 
+  871  ./compile.sh
+  872  ./mdconv -contacts test/sys.dcd
+  873  xmgrace con.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/test/con.res 
+  874  history | tail >> test.sh 
+  875  vim test.sh 
+  876  ls
+  877  ./compile.sh
+  878  ./mdconv -contacts test/sys.dcd
+  879  ls
+  880  more pairs.dat 
+  881  more con.dat 
+  882  ./compile.sh
+  883  ./mdconv -contacts test/sys.dcd
+  884  ls
+  885  more test.sh 
+  886  head pairs.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/test/pairs.res 
+  887  tail pairs.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/test/pairs.res 
+  888  head pairs.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/test/pairs.res 
+  889  ls
+  890  sort -k 2 pairs.dat 
+  891  ./compile.sh
+  892  ./mdconv -contacts test/sys.dcd
+  893  head pairs.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/test/pairs.res 
+  894  tail pairs.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/test/pairs.res 
+  895  diff pairs.dat /green/s4/nawrocki/cg/testing/z32/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/test/pairs.res 
+  896  ls
+  897  vim test.sh 
+  898  ls
+  899  mdconv -h
+  900  ls
+  901  ls ..
+  902  ./mdconv -contacts test/sys.dcd
+  903  ./compile.sh
+  904  ./compile.sh
+  905  #./mdconv -contacts test/sys.dcd
+  906  ./mdconv -contacts 1.0 4.0 test/sys.dcd
+  907  ./compile.sh
+  908  ./compile.sh
+  909  ./compile.sh
+  910  ./mdconv -contacts test/sys.dcd
+  911  cp -r ../mdconv-master ../mdconv-master_mix
+  912  vim note
+  913  cd ../mdconv-master_mix/
+  914  ls
+  915  ./compile.sh
+  916  ./mdconv -contacts test/sys.dcd
+  917  ls
+  918  gedit mdconv.c 
+  919  cd test
+  920  ls
+  921  more cp.sh 
+  922  gcopy readlink -f /green/s4/nawrocki/cg/mix/z30x3/s1.4/e3.0/f10_5/a0.8/sys.dcd 
+  923  ls
+  924  vim cp.sh 
+  925  ls
+  926  rm sys.dcd 
+  927  ./cp.sh 
+  928  ls
+  929  cd ..
+  930  ls
+  931  vim test.sh 
+  932  ls
+  933  gedit /green/s4/nawrocki/cg/mix/z30x3/s1.4/e3.0/f10_5/a0.8/ana/mcon/results/a_1.00_d4/con_pairs.fun 
+  934  more /green/s4/nawrocki/cg/mix/z30x3/s1.4/e3.0/f10_5/a0.8/run.py 
+  935  more /green/s4/nawrocki/cg/mix/z30x3/sys/sys_tra.pdb 
+  936  more /green/s4/nawrocki/cg/mix/z10x3/sys/sys_tra.pdb 
+  937  head /green/s4/nawrocki/cg/mix/z30x3/sys_res/sys_tra.pdb 
+  938  head /green/s4/nawrocki/cg/mix/z30x3/sys_res/sys_tra2.pdb 
+  939  tail /green/s4/nawrocki/cg/mix/z30x3/sys_res/sys_tra2.pdb 
+  940  tail /green/s4/nawrocki/cg/mix/z30x3/sys_res/sys_tra.pdb 
+  941  readlink -f /green/s4/nawrocki/cg/mix/z30x3/sys_res/sys_tra.pdb 
+  942  cd test
+  943  ls
+  944  vim cp.sh 
+  945  ./cp.sh 
+  946  vim cp.sh 
+  947  ./cp.sh 
+  948  ls
+  949  rm sys_tra.pdb 
+  950  vim sys.pdb 
+  951  ls
+  952  cd ..
+  953  ls
+  954  ./mdconv -contacts test/sys.dcd
+  955  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  956  vim test.sh 
+  957  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  958  mdconv -h
+  959  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  960  ./compile.sh
+  961  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  962  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  963  ./compile.sh
+  964  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  965  ./compile.sh
+  966  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  967  ./compile.sh
+  968  ./compile.sh
+  969  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  970  ls
+  971  more con.dat 
+  972   more pairs.dat 
+  973  ls
+  974   more pairs.dat 
+  975  ./mdconv -pdb test/sys.pdb test/sys.dcd
+  976  ./mdconv test/sys.dcd
+  977  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  978  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  979  ./compile.sh
+  980  ./compile.sh
+  981  ./compile.sh
+  982  ./compile.sh
+  983  wc -l test/sys.pdb 
+  984  head test/sys.pdb 
+  985  tail test/sys.pdb 
+  986  vim test/sys.pdb 
+  987  wc -l test/sys.pdb 
+  988  ./compile.sh
+  989  ./compile.sh
+  990  ./compile.sh
+  991  ./compile.sh
+  992  ./compile.sh
+  993  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  994  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  995  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  996  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  997  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  998  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+  999  ./compile.sh
+ 1000  ./compile.sh
+ 1001  ./compile.sh
+ 1002  ./compile.sh
+ 1003  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+ 1004  ./compile.sh
+ 1005  ./compile.sh
+ 1006  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+ 1007  ./compile.sh
+ 1008  ./compile.sh
+ 1009  ./compile.sh
+ 1010  ./compile.sh
+ 1011  ./compile.sh
+ 1012  ./compile.sh
+ 1013  ./compile.sh
+ 1014  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+ 1015  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+ 1016  ./compile.sh
+ 1017  ./compile.sh
+ 1018  vim test.ndx
+ 1019  wc -l test.ndx 
+ 1020  ./compile.sh
+ 1021  ./compile.sh
+ 1022  ./compile.sh
+ 1023  ./compile.sh
+ 1024  ./compile.sh
+ 1025  ./compile.sh
+ 1026  ./compile.sh
+ 1027  ./compile.sh
+ 1028  ./compile.sh
+ 1029  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+ 1030  ./mdconv -contacts -pdb test.ndx test/sys.dcd
+ 1031  more test.ndx 
+ 1032  ./compile.sh
+ 1033  ./compile.sh
+ 1034  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+ 1035  gedit /apps/mmtsb/perl/processDCD.pl 
+ 1036  ./compile.sh
+ 1037  ./compile.sh
+ 1038  ./compile.sh
+ 1039  ./compile.sh
+ 1040  ./compile.sh
+ 1041  ./compile.sh
+ 1042  ./compile.sh
+ 1043  ./compile.sh
+ 1044  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+ 1045  ./compile.sh
+ 1046  ./compile.sh
+ 1047  ./mdconv -contacts -pdb test/sys.pdb test/sys.dcd
+ 1048  ./mdconv -contacts -pdb test.ndx test/sys.dcd
+ 1049  ./compile.sh
+ 1050  ./compile.sh
+ 1051  ./mdconv -contacts -pdb test.ndx test/sys.dcd
+ 1052  ./compile.sh
+ 1053  ls
+ 1054  vim read.c
+ 1055  gcc --o read read.c 
+ 1056  gcc -o read read.c 
+ 1057  ls
+ 1058  gedit read.c 
+ 1059  ls
+ 1060  gcc -o read read.c 
+ 1061  gcc -o read read.c 
+ 1062  gcc -o read read.c 
+ 1063  gcc -o read read.c 
+ 1064  gcc -o read read.c 
+ 1065  ./read 
+ 1066  more test.ndx 
+ 1067  gcc -o read read.c 
+ 1068  ./read 
+ 1069  ./read 
+ 1070  ls
+ 1071  vim test.ndx 
+ 1072  ./read 
+ 1073  ./read 
+ 1074  ./read 
+ 1075  gcc -o read read.c 
+ 1076  gcc -o read read.c 
+ 1077  gcc -o read read.c 
+ 1078  gcc -o read read.c 
+ 1079  more test.ndx 
+ 1080  gcc -o read read.c 
+ 1081  gcc -o read read.c 
+ 1082  ./read 
+ 1083  vim test.ndx 
+ 1084  ./read 
+ 1085  vim test.ndx 
+ 1086  ./read 
+ 1087  vim test.ndx 
+ 1088  ./read 
+ 1089  gcc -o read read.c 
+ 1090  ./read 
+ 1091  gcc -o read read.c 
+ 1092  gcc -o read read.c 
+ 1093  gcc -o read read.c 
+ 1094  gcc -o read read.c 
+ 1095  ls
+ 1096  g++ -c amber.c
+ 1097  g++ -c charmm.c
+ 1098  g++ -c format.c
+ 1099  vi format.c
+ 1100  g++ -c format.c
+ 1101  ls
+ 1102  g++ -c read.c
+ 1103  g++ -c mdconv.c
+ 1104  vi mdconv.c 
+ 1105  g++ -c mdconv.c
+ 1106  vi mdconv.c 
+ 1107  vi mdconv.c 
+ 1108  g++ -c mdconv.c
+ 1109  g++ -c mdconv.c
+ 1110  g++ -c mdconv.c
+ 1111  ls
+ 1112  history > history

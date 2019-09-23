@@ -420,7 +420,7 @@ getEndianFromString(char *str)
     if (!strcasecmp(str,"little")) return LITTLEENDIAN;
 
     fprintf(stderr,"unknown endian string %s\n",str);
-    return -1;
+    return NOENDIAN;
 
 } //End getEndianFromString()
 
@@ -436,7 +436,7 @@ getTrajFormatFromString(char *str)
     if (!strcasecmp(str,"amber")) return Amber;
 
     fprintf(stderr,"unknown trajectory format string %s\n",str);
-    return -1;
+    return NOFORMAT;
 
 } //End getTrajFormatFromString()
 

@@ -131,7 +131,7 @@ fillBuffer(DataStream *io, int len)
                 len,io->maxlen);
         return -1;
     }
-    if ((io->blen=readn(io->fdes,(void *)io->buffer,len))<0)
+    if ((io->blen=readn(io->fdes,(char *)io->buffer,len))<0)
     {
         fprintf(stderr,"Error reading from file: ");
         fprintf(stderr,"%s\n",strerror(errno));
@@ -233,7 +233,7 @@ readLine(DataStream *io, char *buf, int maxlen)
 int
 writeData(DataStream *io, char *buf, int len)
 {
-    return writen(io->fdes,(void *)buf,len);
+    return writen(io->fdes,(char *)buf,len);
 } //End writeData()
 
 int

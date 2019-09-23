@@ -1,0 +1,500 @@
+   30  cp ~/Desktop/aaa.pdb sys.pdb
+   31  ls
+   32  vim cg.sh 
+   33  ls
+   34  ./cg.sh 
+   35  more caavg 
+   36  ls
+   37  vim caavg 
+   38  ls
+   39  head sys.pdb 
+   40  vim cg.sh 
+   41  ./cg.sh 
+   42  head sys.pdb 
+   43  vim caavg 
+   44  ls
+   45  readlink -f /green/s4/phw24/1vii_64_154A/NVT_9/comb.prot.10.dcd 
+   46  gcopy readlink -f /green/s4/phw24/1vii_64_154A/NVT_9/comb.prot.10.dcd 
+   47  ls
+   48  vim cg.sh 
+   49  ./cg.sh 
+   50  ls
+   51  vmd avg.pdb avg.dcd 
+   52  ls
+   53  vim cg.sh 
+   54  ls
+   55  cp -r /green/s4/nawrocki/wonpil/sim/p3/b0/d4/c30_anton/rdf_charmm/ff .
+   56  ls
+   57  ./cg.sh 
+   58  ls
+   59  ls
+   60  vim cg.sh 
+   61  ls
+   62  xmgrace rdf.dat 
+   63  xmgrace rdf.dat /home/feig/projects/cgprot/rdf.md.32m
+   64  xmgrace rdf.dat -block /home/feig/projects/cgprot/rdf.md.32m -bxy 2:4
+   65  ls
+   66  vim cg.sh 
+   67  more ff/*
+   68  mdconv -info -verbose avg.dcd | head -n 25 | awk '{if($1=="atoms"){print $3}}'
+   69  ls
+   70  ls
+   71  ls
+   72  mdconv -info -verbose
+   73  mdconv -h
+   74  ls
+   75  ls
+   76  mkdir ana
+   77  cd ana/
+   78  mkdir mcon
+   79  ls
+   80  ls
+   81  cd mcon/
+   82  ls
+   83  cp /green/s4/nawrocki/wonpil/sim/p3/b0/d4/c30_anton/cg_con/*.sh .
+   84  cp /green/s4/nawrocki/wonpil/sim/p3/b0/d4/c30_anton/cg_con/*.pl .
+   85  cp /green/s4/nawrocki/wonpil/sim/p3/b0/d4/c30_anton/cg_con/*.fun .
+   86  ls
+   87  ls
+   88  ls
+   89  ls
+   90  gedit  con_pairs.sh con_pairs_empty.fun 
+   91  ls
+   92  gedit  con_pairs.sh con_pairs_empty.fun 
+   93  ls
+   94  ls
+   95  catdcd  -num ../../avg.dcd 
+   96  ls
+   97  ls
+   98  ls
+   99  gedit con_pairs.sh con_pairs_empty.fun 
+  100  ls
+  101  ls
+  102  ls ..
+  103  ls ../..
+  104  gedit ../../avg.pdb 
+  105  gedit ../../sys.pdb 
+  106  awk '/ATOM/{i++;r[i]=$6;s[i]=substr($NF,2); print r[i],s[i]}' ../../sys.pdb 
+  107  vim list.sh
+  108  chmod u+wrx list.sh 
+  109  ls
+  110  mv list.sh  ../../
+  111  cd ../..
+  112  ls
+  113  gedit list.sh 
+  114  ./list.sh 
+  115  ./list.sh | wc -l
+  116  ./list.sh | wc -l
+  117  ./list.sh 
+  118  ls
+  119  ls
+  120  cd ana/mcon/
+  121  ls
+  122  ls
+  123  ./con_pairs.sh 
+  124  top
+  125  ls
+  126  ls results/a_1.00_d4/
+  127  ./con_pairs.sh 
+  128  ./con_pairs.sh 
+  129  ls
+  130  ./con_pairs.sh 
+  131  ls
+  132  ls results/a_1.00_d4/
+  133  head results/a_1.00_d4/*.res
+  134  ls
+  135  vim clust_ave.sh 
+  136  meld cclust.pl /green/s4/nawrocki/villin_langevin/charmm/con_32/ion_0/dam_0.01/sca_1.09/pos_39/tra_ca/com64/dcd/ana/clust/cclust.pl 
+  137  ls /green/s4/nawrocki/villin_langevin/plt/clust/wang-san/
+  138  vim /green/s4/nawrocki/villin_langevin/plt/clust/wang-san/plt_draft.py 
+  139  vim /green/s4/nawrocki/villin_langevin/plt/clust/panel_blocks_1.09_64.py 
+  140  ls /green/s4/nawrocki/villin_langevin/charmm/con_32/ion_0/dam_0.01/sca_1.09/pos_39/
+  141  ls
+  142  ls
+  143  gedit cclust.pl 
+  144  ls
+  145  ./con_pairs.sh 
+  146  ls
+  147  xmgrace results/a_1.00_d4/clust_ave.xmg 
+  148  xmgrace results/a_1.00_d4/clust_ave.sh 
+  149  ls
+  150  gedit clust_ave.sh 
+  151  ls
+  152  ./con_pairs.sh 
+  153  xmgrace results/a_1.00_d4/clust_ave.sh 
+  154  xmgrace results/a_1.00_d4/clust_ave.xmg 
+  155  ls
+  156  ls
+  157  gcopy readlink -f ../mcon/
+  158  ls
+  159  gcopy readlink -f ../mcon/
+  160  ls
+  161  ./con_pairs.sh 
+  162  ls
+  163  xmgrace results/a_1.00_d4/clust_ave.xmg 
+  164  ./con_pairs.sh 
+  165  xmgrace results/a_1.00_d4/clust_ave.xmg 
+  166  ls
+  167  xmgrace results/a_1.00_d4/clust_ave.xmg 
+  168  ls -lt
+  169  xmgrace results/a_1.00_d4/clust_ave.xmg 
+  170  ls
+  171  gcopy readlink -f results/a_1.00_d4/clust_ave.xmg 
+  172  ls
+  173  ls
+  174  head ../../sys.pdb 
+  175  vmd ../../sys.pdb 
+  176  du -sh ../../sys.pdb 
+  177  cp ../../sys.pdb ~/Desktop/sys_64_1vii.pdb
+  178  head /green/s4/nawrocki/wonpil/sim/p3/b0/d4/c10_anton/pdb/equ.pdb 
+  179  vmd /green/s4/nawrocki/wonpil/sim/p3/b0/d4/c10_anton/pdb/equ.pdb 
+  180  head /green/s4/nawrocki/wonpil/sim/p3/b0/d4/c10_anton/pdb/equ.pdb 
+  181  du -sh /green/s4/nawrocki/wonpil/sim/p3/b0/d4/c10_anton/pdb/equ.pdb 
+  182  gcopy readlink -f /green/s4/nawrocki/wonpil/sim/p3/b0/d4/c10_anton/pdb/equ.pdb 
+  183  gcopy readlink -f ../../sys.pdb
+  184  more /home/nawrocki/charmm_openmm_hmcm/charmm_alp_redmax_git/charmm/install.com 
+  185  more /home/nawrocki/charmm_openmm_hmcm/charmm_alp_redmax_git/charmm/charmm_install.sh 
+  186  ls
+  187  xmgrace results/a_1.00_d4/clust_ave.xmg 
+  188  head /green/s4/nawrocki/wonpil/sim/p3/b0/d4/c10_anton/pdb/equ.pdb 
+  189  head ../../sys.pdb 
+  190  ls
+  191  ls results
+  192  grep mdconv /apps/mmtsb/perl/processDCD.pl 
+  193  vim /apps/mmtsb/perl/processDCD.pl 
+  194  mdconv -h
+  195  whereis mdconv
+  196  ls /blue/apps/bin64/mdconv
+  197  ls /blue/apps/bin64/
+  198  find /blue/apps -name "mdconv"
+  199  cd /green/s4/nawrocki/villin_langevin/charmm/con_32/ion_0/dam_0.01/sca_1.09/pos_39
+  200  ls
+  201  ls -lt | head
+  202  cd rot
+  203  ls
+  204  cd con/
+  205  ls
+  206  ls
+  207  ls
+  208  cd ..
+  209  ls
+  210  vim avg.sh 
+  211  ls
+  212  ls *
+  213  ls
+  214  ls ../tra_ca
+  215  ls ../tra_ca/*
+  216  ls
+  217  gcopy pwd
+  218  cd /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot
+  219  ls
+  220  more history 
+  221  ls
+  222  grep mdconv history 
+  223  vi ~feig/projects/mdconv/examples/mdconv.c
+  224  ls  ~feig/projects/mdconv/examples
+  225  du -sh  ~feig/projects/mdconv/examples
+  226  ls  ~feig/projects/mdconv
+  227  du -sh  ~feig/projects/mdconv
+  228  ls
+  229  mkdir gmdconv
+  230  cd gmdconv/
+  231  ls
+  232  ls  ~feig/projects/mdconv/examples/
+  233  vim  ~feig/projects/mdconv/examples/compile.cmd 
+  234  ls
+  235  cp -r  ~feig/projects/mdconv .
+  236  ls
+  237  ls -lt
+  238  cd mdconv/
+  239  ls
+  240  vim install-sh 
+  241  ls
+  242  vim INSTALL 
+  243  ls
+  244  cd examples/
+  245  ls
+  246  meld mdconv.c*
+  247  gcopy pwd
+  248  /green/s4/nawrocki/villin_langevin/charmm/con_32/ion_0/dam_0.01/sca_1.09/pos_39/rot/avg.sh .
+  249  ls
+  250  ls
+  251  cp /green/s4/nawrocki/villin_langevin/charmm/con_32/ion_0/dam_0.01/sca_1.09/pos_39/rot/avg.sh ../../../
+  252  ls
+  253  ls -lt
+  254  rm avg.dcd ca_header.dcd 
+  255  ls
+  256  cd ../..
+  257  ls
+  258  cd ..
+  259  ls
+  260  vim avg.sh 
+  261  ls
+  262  cd gmdconv/mdconv/
+  263  ls
+  264  cd examples/
+  265  l
+  266  ls
+  267  gedit  mdconv.c
+  268  ls
+  269  ls
+  270  grep mdconv ../*
+  271  cd ..
+  272  ls
+  273  gedit README 
+  274  ls
+  275  cd examples/
+  276  ls
+  277  more compile.cmd 
+  278  ls
+  279  ls ../
+  280  gedit ../INSTALL 
+  281  ls
+  282  ls ..
+  283  gedit ../AUTHORS 
+  284  gedit ../AUTHORS 
+  285  ls
+  286  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  287  ls ..
+  288  ls ../libmdconv
+  289  ls
+  290  ls
+  291  ls ../
+  292  #export $PKG_CONFIG_PATH=
+  293  readlink -f ../libmdconv
+  294  gcopy readlink -f ../libmdconv
+  295  export $PKG_CONFIG_PATH=/green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/gmdconv/mdconv/libmdconv:$PKG_CONFIG_PATH
+  296  env
+  297  echo $PKG_CONFIG_PATH
+  298  export $PKG_CONFIG_PATH=/green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/gmdconv/mdconv/libmdconv
+  299  export PKG_CONFIG_PATH=/green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/gmdconv/mdconv/libmdconv:$PKG_CONFIG_PATH
+  300  echo $PKG_CONFIG_PATH
+  301  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  302  gcc `pkg-config --cflags --libs libmdconv` mdconv.c -o gmdconv
+  303  echo $PKG_CONFIG_PATH
+  304  ls ../libmdconv/datastream.h
+  305  ls ../libmdconv
+  306  echo $PKG_CONFIG_PATH
+  307  ls
+  308  #gcc `pkg-config --cflags --libs libmdconv` mdconv.c -o gmdconv
+  309  ls ..
+  310  ls
+  311  gedit ../INSTALL ../README &
+  312  gcc 'pkg-config --cflags --libs libmdconv' mdconv.c -o gmdconv
+  313  gcc pkg-config --cflags --libs libmdconv mdconv.c -o gmdconv
+  314  gcc `pkg-config --cflags --libs libmdconv` mdconv.c -o gmdconv
+  315  echo $PKG_CONFIG_PATH
+  316  export PKG_CONFIG_PATH=/green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/gmdconv/mdconv/libmdconv
+  317  echo $PKG_CONFIG_PATH
+  318  gcc `pkg-config --cflags --libs libmdconv` mdconv.c -o gmdconv
+  319  echo $PKG_CONFIG_PATH
+  320  ls /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/gmdconv/mdconv/libmdconv/libmdconv-1.0.0.la 
+  321  gcc `pkg-config --cflags --libs libmdconv-1.0.0.la` mdconv.c -o gmdconv
+  322  #gcc `pkg-config --cflags --libs ` mdconv.c -o gmdconv
+  323  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  324  export PKG_CONFIG_PATH=/green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/gmdconv/mdconv/libmdconv:$PKG_CONFIG_PATH
+  325  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  326  ls ../libmdconv-1.0.pc
+  327  export PKG_CONFIG_PATH=/green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/gmdconv/mdconv
+  328  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  329  ls
+  330  ls ..
+  331  ls
+  332  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  333  gedit mdconv.c
+  334  ls
+  335  ls
+  336  gcopy pwd
+  337  ls
+  338  gedit ../NEWS 
+  339  ls ../libmdconv/datastream.h
+  340  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  341  grep copyFrameSelection ..
+  342  grep copyFrameSelection ../*
+  343  grep copyFrameSelection ../*/*
+  344  grep copyFrameSelection ../*/* | grep sub
+  345  grep copyFrameSelection ../*/*/* | grep sub
+  346  grep copyFrameSelection ../*/*/*/* | grep sub
+  347  ls
+  348  gedit ../libmdconv/trajdata.c
+  349  ls
+  350  ls /usr/local/bin/
+  351  ls /usr/local/src/
+  352  cd ..
+  353  ./configure 
+  354  make
+  355  make install
+  356  sudo make install
+  357  mdconv -h
+  358  whereis mdconv
+  359  ls
+  360  cd examples/
+  361  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  362  ls -lt
+  363  ls
+  364  cd .
+  365  cd ..
+  366  ls
+  367  ls -lt
+  368  export PKG_CONFIG_PATH=/green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/gmdconv/mdconv:/usr/local/lib/pkgconfig
+  369  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  370  cd examples/
+  371  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  372  export PKG_CONFIG_PATH=/green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/gmdconv/mdconv/libmdconv:/usr/local/lib/pkgconfig
+  373  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  374  gcc mdconv.c
+  375  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  376  ls
+  377  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  378  gcc-4.7 `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  379  gcc-5 `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  380  ls
+  381  mdconv -h
+  382  cd ..
+  383  make check
+  384  ls /usr/local/lib/pkgconfig/libmdconv-1.0.pc 
+  385  ls
+  386  ls
+  387  ls -lt
+  388  vim config.log 
+  389  make check
+  390  ls
+  391  export PKG_CONFIG_PATH=/green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/gmdconv/mdconv/libmdconv:/usr/local/lib/pkgconfig
+  392  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  393  ls
+  394  ls
+  395  cd examples/
+  396  gcc `pkg-config --cflags --libs libmdconv-1.0` mdconv.c -o gmdconv
+  397  cd ..
+  398  ./configure
+  399  ls
+  400  cd gitpackage/
+  401  ls
+  402  cd mdconv/
+  403  ls
+  404  more compile.sh 
+  405  ls
+  406  more README.md 
+  407  ls
+  408  exit
+  409  cd /home/jaie/Documents/Natalia/
+  410  ls
+  411  ls /home/jaie/Documents/Natalia/
+  412  ls /home/jaie/Documents/
+  413  ls /home/jaie/Documents/Natalia/
+  414  ls -lt /home/jaie/Documents
+  415  ls -lt /home/jaie/Documents
+  416  ls -lt /home/jaie/Documents/Natalia/
+  417  ls -lt /home/jaie/Documents/
+  418  ls -lt /home/jaie/Documents/
+  419  ls -lt /home/jaie/Documents/
+  420  ls -lt /home/jaie/Documents/
+  421  ls -lt /home/jaie/Documents/
+  422  cd /home/jaie/Documents/Natalia/
+  423  ls -lt /home/jaie/Documents/
+  424  ls -lt /home/jaie/Documents/Natalia/
+  425  vim /home/jaie/Documents/Natalia/crowders.inp 
+  426  more /home/jaie/Documents/Natalia/crowders.in
+  427  ls -lt /home/jaie/Documents/Natalia/*
+  428  ls -lt /home/jaie/Documents/Natalia/*
+  429  ls -lt /home/jaie/Documents/Natalia/*
+  430  ls -lt /home/jaie/Documents/
+  431  ls -lt /home/jaie/Documents/Natalia/
+  432  ls -lt /home/jaie/Documents/Natalia/
+  433  ls -lt /home/jaie/Documents/Natalia/
+  434  cd /home/jaie/Documents/Natalia/
+  435  ls
+  436  vim crowders.i
+  437  vim crowders.inp 
+  438  ls
+  439  vim eq-a.pdb 
+  440  vim eq-b.pdb 
+  441  vim eq-c.pdb 
+  442  vim eq-d.pdb 
+  443  vmd eq-d.pdb 
+  444  vmd eq-d.pdb 
+  445  vim eq-d.pdb 
+  446  vim crowders.inp 
+  447  ls
+  448  vim crowders.i
+  449  vim crowders.img 
+  450  ls
+  451  vim crowders_out.out 
+  452  ls
+  453  vim eq.conf 
+  454  ls
+  455  ls
+  456  vim crowders.inp 
+  457  tail eq-a.pdb 
+  458  head eq-b.pdb 
+  459  vim crowders.inp 
+  460  exit
+  461  exit
+  462  head /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/int2/int.res 
+  463  tail /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/int2/int.res 
+  464  tail /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/int/int.res 
+  465  vim /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/int/int.sh 
+  466  catdcd -num /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/ca.dcd 
+  467  #catdcd -first 19990 -last 20000 -out /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/ca.dcd 
+  468  mkdir test
+  469  catdcd -first 19990 -last 20000 -out /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/ca.dcd test/ca.dcd
+  470  catdcd -first 19990 -last 20000 -o test/ca.dcd /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/ca.dcd
+  471  catdcd -first 19991 -last 20000 -o test/ca.dcd /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/ca.dcd
+  472  cp /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/ca.pdb test/
+  473  cp /green/s4/nawrocki/villin_langevin/charmm/con_8/ion_0/dam_0.01/sca_1.09/pos_43/rot/ca.psf test/
+  474  ls
+  475  ls test/
+  476  ls
+  477  ./mdconv -h
+  478  ./mdconv -info -verbose test/ca.dcd | less
+  479  ./mdconv -h
+  480  meld ~/Desktop/Files2017/toppar/par_all36?_prot.prm
+  481  meld ~/Desktop/Files2017/toppar/par_all36*_prot.prm
+  482  ./mdconv -h
+  483  ./mdconv -info | less
+  484  ./mdconv -verbose | less
+  485  ./mdconv -verbose test/ca.dcd 
+  486  ./mdconv -info test/ca.dcd 
+  487  ./mdconv -info test/ca.dcd | head -n 25
+  488  ./mdconv -info -verbose test/ca.dcd | head -n 25
+  489  ls
+  490  ls
+  491  ./compile.sh 
+  492  ./compile.sh 
+  493  ./mdconv -info -verbose test/ca.dcd | head -n 25
+  494  ./mdconv -info -verbose test/ca.dcd | head -n 25
+  495  ./compile.sh 
+  496  ./mdconv -info -verbose test/ca.dcd | head -n 25
+  497  ./mdconv -info -verbose -contacts test/ca.dcd | head -n 25
+  498  history
+  499  ./mdconv -h
+  500  exit
+  501  cd ~/projects
+  502  ccd 
+  503  cd ~feig/projects
+  504  ls
+  505  cd mdconv
+  506  ls
+  507  cd examples/
+  508  vi mdconv.c
+  509  ls
+  510  cd ..
+  511  ls
+  512  cd ..
+  513  cd src
+  514  cd c
+  515  ls -al
+  516  ls -al
+  517  ls pdb*
+  518  vi pdb.h
+  519  ls
+  520  vi watdens.c
+  521  vi pdb.h
+  522  vi watdens.c
+  523  ls pdb.h
+  524  ls pdb.c
+  525  ls vector.h
+  526  vi vector.h
+  527  vi pdb.c
+  528  ls
+  529  history > /home/nawrocki/Desktop/gmdconv/mdconv-master_mix/history2

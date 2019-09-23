@@ -21,7 +21,6 @@
             -avgframes  
             -lsqfit
             -removedrift
-            -contacts A D SIGfile
 */
 
 #include <stdio.h>
@@ -50,11 +49,12 @@ int verbose=0;
 int withinSelection(int inx, int *from, int *to, int n, int skip);
 int getRangeFromString(char *atoms, int *from, int *to, int maxsel);
 void unwrapFrame(Frame *from, Frame *last, Frame *addwrap,double xbox, double ybox, double zbox); 
+//void fcon(Frame *from);	// mine
 void minsegFrame(Frame *from, int *minsegfrom, int *minsegto, int nminsegsel, double xbox, double ybox, double zbox); 
 void alignFrame(Frame *f, Frame *ref);
 int readAveragingList(char *fname, int ***avgfrom, int ***avgto, int **avgnsel);
 int readTranslationTable(char *fname, int **tab);
-
+char readPDB(char *pdbName, PDBEntry *pdb);	// mine
 //void frotu_(double *r, double *u);
 
 void usage() {
@@ -81,7 +81,7 @@ void usage() {
   fprintf(stderr,"         -avgframes\n");
   fprintf(stderr,"         -lsqfit\n");
   fprintf(stderr,"         -removedrift\n");
-  fprintf(stderr,"         -contacts A D SIGfile\n"); // greg
+  fprintf(stderr,"         -contacts: find pairs of particles that are in contact\n");	// mine
 
   exit(0);  
 }
@@ -106,7 +106,6 @@ int main(int argc, char **argv) {
   char ofile[256];
   char *trajfile[MAXTRAJFILES];
   char pdbfile[256];
-  char sigfile[256];	// greg
   char transfile[256];
   char mfile[256];
   char avgatomsfile[256];
@@ -173,30 +172,25 @@ int main(int argc, char **argv) {
   double xboxsize, yboxsize, zboxsize;
   int wrapped;
 
-// greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg
+// mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine
 
   int contacts;
   int coni,conj;
   double condx,condy,condz,cond;
 
-  double A;
-  double D;
+  double A=1.00;
+  double D=4.0;
 
   FILE *confile;
+  FILE *strfile;
   FILE *pairsfile;
 
-  char resname[10000][4];	// number of residues and residue name characters (+1)
-  char segid[10000][6];
+  char* resname[400000];
 
-  int nsigres=0,nsigval=0;
-  char sigres[1000][4];
-  float sigval[1000];
-
-// greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg
+// mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine
 
   *ofile=0;  
   *pdbfile=0;
-  *sigfile=0; // greg
   *frames=0;
   *atoms=0;
   *transfile=0;
@@ -225,7 +219,7 @@ int main(int argc, char **argv) {
 
   removedrift=0;
 
-  contacts=0;	// greg
+  contacts=0;	// mine
 
   clearFormat(&tofmt);
   clearFormat(&fromfmt);
@@ -243,6 +237,7 @@ int main(int argc, char **argv) {
       strcpy(ofile,argv[++i]);
     } else if (!strcmp(argv[i],"-pdb")) {
       strcpy(pdbfile,argv[++i]);
+      strfile=fopen(pdbfile,"r");	// mine
     } else if (!strcmp(argv[i],"-avgatoms")) {
       strcpy(avgatomsfile,argv[++i]);
     } else if (!strcmp(argv[i],"-framelist")) {
@@ -283,80 +278,10 @@ int main(int argc, char **argv) {
       xboxsize=atof(argv[++i]);
       yboxsize=atof(argv[++i]);
       zboxsize=atof(argv[++i]);
-
-// greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg
-
-    } else if (!strcmp(argv[i],"-contacts")) {
+    } else if (!strcmp(argv[i],"-contacts")) {		// mine
       contacts=1;
-
-      A=atoi(argv[++i]);
-      D=atoi(argv[++i]);
-
       confile=fopen("con.dat","w");
       pairsfile=fopen("pairs.dat","w");
-
-      strcpy(sigfile,argv[++i]); // read sigmas from a file
-      strcpy(pdbfile,argv[++i]);
-
-      FILE *fptr;
-      fptr=fopen(pdbfile,"r");
-
-      PDBEntry *pdb;
-      pdb=new PDBEntry[400000];
-
-      int natom=0;
-
-      while(!feof(fptr))
-      {
-       if (pdb[natom].read(fptr)>0) 
-       {
-        strcpy(resname[natom],pdb[natom].residueName());
-        strcpy(segid[natom],pdb[natom].segmentID());
-       }
-       natom++;
-      }
-      fclose(fptr);
-
-// read sigmas from a file:
-
-      FILE *fpsig;
-
-      fpsig=fopen(sigfile,"r");
-
-      int i=0;
-
-      while(!feof(fpsig))
-      {
-       i++;
-//       printf("ndx: %i\n",i);  
-       if(i==1)
-       {
-        if(fscanf(fpsig,"%s",&sigres[nsigres])==1)
-        {
-         printf("res: %s\n",sigres[nsigres]);
-         nsigres++;
-        }
-       }
-       else if(i==2)
-       {
-        if(fscanf(fpsig,"%f",&sigval[nsigval])==1){
-        printf("val: %f\n",sigval[nsigval]);
-        i=0;
-        nsigval++;
-        }
-       }
-      }
-/*
-      printf("res first: %s\n",sigres[0]);
-      printf("res last %s\n",sigres[nsigres-1]);
-
-      printf("val first: %f\n",sigval[0]);
-      printf("val last: %f\n",sigval[nsigval-1]);
-*/
-      fclose(fpsig);
-
-// greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg
-
     } else {
       trajfile[ntrajfile]=(char *)malloc(strlen(argv[i])+1);
       strcpy(trajfile[ntrajfile++],argv[i]);
@@ -372,7 +297,7 @@ int main(int argc, char **argv) {
     strcpy(trajfile[ntrajfile++],"-");
   }
 
-  if (*ofile==0 && !infoQ && !contacts) {		// greg
+  if (*ofile==0 && !infoQ && !contacts) {		// mine
     fprintf(stderr,"please provide output file\n");
     exit(1);
   }
@@ -678,10 +603,29 @@ int main(int argc, char **argv) {
             last->angleC=sframe->angleC;
 	  } 
 
-// greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg
+// mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine
 
 	  if(contacts)
-          {
+          {				// mine
+
+           PDBEntry *pdb;
+           pdb=new PDBEntry[400000];
+
+           FILE *fptr;
+           fptr=fopen("test/sys.pdb","r");	// mine
+
+           char* resname[400000];
+           int natom=0;
+
+           while(!feof(fptr))
+           {
+            if (pdb[natom].read(fptr)>0) 
+            {
+             resname[natom]=pdb[natom].residueName();
+            }
+            natom++;
+           }
+           fclose(fptr);
 
 //           fprintf(stderr,"calculate contacts here!\n");
 //           fprintf(stderr,"number of atoms: %i\n",inptrajdata.nAtoms);
@@ -731,71 +675,33 @@ int main(int argc, char **argv) {
 
              cond=condx*condx+condy*condy+condz*condz;
 
+// rg:
+// 1vii: 1.063
+// 1gb1: 1.188
+// 1ubq: 1.294
+
              double rgA;
              double rgB;
 
-// to read residues properly the input pdb file cannot have anything else than atoms !!!
-/*
-             if(!strcmp(resname[coni],"CGA")){rgA=18.1273;}
-             else if (!strcmp(resname[coni],"CGB")){rgA=20.6692;}
-             else if (!strcmp(resname[coni],"CGC")){rgA=23.3446;}
-             else if (!strcmp(resname[coni],"CGP")){rgA=23.3446;}
-             else if (!strcmp(resname[coni],"CGL")){rgA=26.9569;}
-             else if (!strcmp(resname[coni],"CGI")){rgA=47.7310;}
+             if(!strcmp(resname[coni],"CGA")){rgA=10.63;}
+             else if (!strcmp(resname[coni],"CGB")){rgA=11.88;}
+             else if (!strcmp(resname[coni],"CGC")){rgA=12.94;}
 
-             if(!strcmp(resname[conj],"CGA")){rgB=18.1273;}
-             else if (!strcmp(resname[conj],"CGB")){rgB=20.6692;}
-             else if (!strcmp(resname[conj],"CGC")){rgB=23.3446;}
-             else if (!strcmp(resname[conj],"CGP")){rgB=23.3446;}
-             else if (!strcmp(resname[conj],"CGL")){rgB=26.9569;}
-             else if (!strcmp(resname[conj],"CGI")){rgB=47.7310;}
-*/
-
-             int ir;
-
-             for (ir=0;ir<=nsigres-1;ir++) {
-             if (!strcmp(resname[coni],sigres[ir])) {
-              rgA=sigval[ir];
-//              printf("%i %f %f\n",ir,sigval[ir],rgA);
-              }
-             }
-             for (ir=0;ir<=nsigres-1;ir++) {
-             if (!strcmp(resname[conj],sigres[ir])) {
-              rgB=sigval[ir];
-//              printf("%i %f %f\n",ir,sigval[ir],rgB);
-              }
-             }
+             if(!strcmp(resname[conj],"CGA")){rgB=10.63;}
+             else if (!strcmp(resname[conj],"CGB")){rgB=11.88;}
+             else if (!strcmp(resname[conj],"CGC")){rgB=12.94;}
 
              double rc;
 
-             rc=(A*(rgA+rgB)*0.5+D)*(A*(rgA+rgB)*0.5+D);
+             rc=(A*(rgA+rgB)+D)*(A*(rgA+rgB)+D);
 
 //             fprintf(stderr,"squared cutoff: %i %i %i %s %s %f %f %f %f\n",
-//             i,coni,conj,resname[coni],resname[conj],rgA,rgB,sqrt(rc),sqrt(cond));
-
-//             fprintf(stderr,"coordinates of atom: %i %lf %lf %lf\n",
-//             coni,last->x[coni],last->y[coni],last->z[coni]);
-//             fprintf(stderr,"coordinates of atom: %i %lf %lf %lf\n",
-//             coni,last->x[conj],last->y[conj],last->z[conj]);
-
-
-//             fprintf(stderr,"resid i-2: %s\n",resname[coni]);
-//             fprintf(stderr,"resid i-1: %s\n",resname[coni]);
-
-
-//             fprintf(stderr,"resid i: %s\n",resname[coni]);
-//             fprintf(stderr,"resid j: %s\n",resname[conj]);
-
-
-//             fprintf(stderr,"resid j+1: %s\n",resname[conj]);
-//             fprintf(stderr,"resid j+2: %s\n",resname[conj]);
-
+//             i,coni+1,conj+1,resname[coni],resname[conj],rgA,rgB,rc,cond);
 
              if(cond<=rc)
              {cc=cc+1;
-              fprintf(pairsfile,"%i %i %i\n",i+1,coni+1,conj+1);
-//              fprintf(pairsfile,"%i %i %i %s %s %12.6f\n",i+1,coni,conj,resname[coni],resname[conj],sqrt(cond));
-//              fprintf(pairsfile,"%i %i %i %s %s %s %s %12.6f\n",i+1,coni,conj,resname[coni],resname[conj],segid[coni],segid[conj],sqrt(cond));
+              fprintf(pairsfile,"%i %i %i %i\n",i+1,coni+1,conj+1);
+//              fprintf(stderr,"%i %i %i %s %s\n",i+1,coni+1,conj+1,resname[coni],resname[conj]);
              }
 
             }
@@ -806,7 +712,7 @@ int main(int argc, char **argv) {
 
           }
 
-// greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg greg
+// mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine
 
           if (nminsegsel>1) {
             minsegFrame(sframe,minsegfrom,minsegto,nminsegsel,xboxsize,yboxsize,zboxsize);
@@ -850,11 +756,9 @@ int main(int argc, char **argv) {
     iframe+=inptrajdata.frames;
   }
 
-  if(contacts)
-  {
-   fclose(confile); // greg
-   fclose(pairsfile); // greg
-  }
+  fclose(confile); // mine
+  fclose(pairsfile); // mine
+  fclose(strfile); // mine
 
   // finish up
 
@@ -1081,6 +985,11 @@ int readTranslationTable(char *fname, int **tab) {
   return n;
 }  
 
+//void		// mine
+//fcon(char *fname){
+//fprintf(stderr,"%s\n",fname);
+//}
+
 void
 unwrapFrame(Frame *from, Frame *last, Frame *addwrap,double xbox, double ybox, double zbox) {
   int i;
@@ -1245,3 +1154,30 @@ alignFrame(Frame *f, Frame *ref) {
   } 
 }
 
+// mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine
+/*
+char readPDB(char *pdbName, PDBEntry *pdb) 
+{
+
+ FILE *fptr;
+ fptr=fopen("test/sys.pdb","r");	// mine
+
+ char* resname[400000];
+ int natom=0;
+
+// char strs[400000][3+1] = {"CXX","CYY"};
+// fprintf(stderr,"%s\n",strs[0]);
+
+ while(!feof(fptr)){
+  if (pdb[natom].read(fptr)>0) 
+  {
+   resname[natom]=pdb[natom].residueName();
+   fprintf(stderr,"%i %s\n",natom,resname[natom]);
+  }
+  natom++;
+ }
+ fclose(fptr);
+// return resname;
+}
+*/
+// mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine mine

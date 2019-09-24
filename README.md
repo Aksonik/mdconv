@@ -7,11 +7,13 @@
 mdconv -contacts A D file.dat file.pdb file.dcd
 ```
 *A* and *D* -- parameters in the contact criterion (see below). 
-*file.dat* -- residue names of molecules and their sizes in [A].
+
+*file.dat* -- residue names of molecules and their sizes (*R<sub>c</sub>*) in [A].
 
 #### Output
 
 *con.dat* -- total number of contacts for each trajectory frame.
+
 *pairs.dat* -- frame number, pair of molecules that form a contact.
 
 #### Contact criterion

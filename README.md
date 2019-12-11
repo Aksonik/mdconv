@@ -23,3 +23,5 @@ mdconv -contacts A D file.dat file.pdb file.dcd
 #### Remarks
 
 See the sample.
+
+The work was done at the Michigan State University.
